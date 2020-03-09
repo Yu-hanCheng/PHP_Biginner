@@ -13,7 +13,7 @@
 <body>
     <header>
         <h1><?php
-                echo 'HELLO WORLD';    
+                echo 'HELLO, '.$_GET['name'];    
             ?>
         </h1>
     </header>

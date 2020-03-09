@@ -13,7 +13,7 @@
 <body>
     <header>
         <h1><?=
-                'HELLO, '.$_GET['name'];    
+                'HELLO, '. htmlspecialchars($_GET['name']);    
             ?>
         </h1>
     </header>

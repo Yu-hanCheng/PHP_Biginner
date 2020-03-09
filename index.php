@@ -12,8 +12,8 @@
 </head>
 <body>
     <header>
-        <h1><?php
-                echo 'HELLO, '.$_GET['name'];    
+        <h1><?=
+                'HELLO, '.$_GET['name'];    
             ?>
         </h1>
     </header>

@@ -12,7 +12,10 @@
 </head>
 <body>
     <header>
-        <h1>hello</h1>
+        <h1><?php
+                echo 'HELLO WORLD';    
+            ?>
+        </h1>
     </header>
 </body>
 </html> 

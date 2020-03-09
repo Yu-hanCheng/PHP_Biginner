@@ -14,6 +14,9 @@
     <header>
         <h1><?=
                 $greeting;
+                foreach ($names as $name) {
+                    echo "<li>$name</li>";
+                }
             ?>
         </h1>
     </header>

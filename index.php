@@ -1,49 +1,14 @@
 <?php
 
-    $greeting = "HELLO";
-    $names = [
-        'zoe',
-        'sarah',
-        'jenny'
-    ];
-
-    $person = [
-        'age' => 30,
-        'hair' => 'black',
-        'career' => 'backend developer'
-    ];
-
-    $task = [
-        'title' => 'finish homework',
-        'due' => 'today',
-        'completed' =>true,
-    ];
-
-    class Task
-    {
-       public $description;
-       public $completed = false;
-       
-        public function __construct($description)
-        {
-            $this->description = $description;
-        }
-
-        public function complete()
-        {
-            $this->completed = true;
-        }
-        public function isComplete()
-        {
-            return $this->completed;
-        }
+    try {
+        $pdo = new PDO('mysql:host=127.0.0.1;dbname=todolist','sarahcheng','www^0^Yoyo409');
+    } catch (PDOException $e) {
+        die('Could not connent');
     }
 
-    $tasks = [
-        new Task('Go to the store'),
-        new Task('Finish'),
-        new Task('Clean my room')
-    ];
+    $statement = $pdo->prepare('select * from todos');
+    $statement->execute();
 
-    $tasks[1]->complete();
+    $tasks = $statement->fetchAll(PDO::FETCH_OBJ);
+    var_dump($tasks);
     require 'index.view.php';

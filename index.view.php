@@ -12,9 +12,10 @@
 </head>
 <body>
     <ul>
-        <?php foreach ($person as $feature => $val) :?>
-                <li><strong><?= $feature; ?></strong><?= $val; ?></li>
-        <?php endforeach; ?>
+        <li><strong>Title </strong><?= ucwords($task['title']); ?></li>
+    </ul>
+    <ul>
+        <li><strong>Status </strong><?= $task['completed']?'Complete' : 'Incomplete'; ?></li>
     </ul>
 </body>
 </html> 

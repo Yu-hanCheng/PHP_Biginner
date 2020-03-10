@@ -13,10 +13,10 @@
         'career' => 'backend developer'
     ];
 
-
-    echo '<pre>';
-    var_dump($person);
-    echo '</pre>';
-    die();
+    $task = [
+        'title' => 'finish homework',
+        'due' => 'today',
+        'completed' => false,
+    ];
 
     require 'index.view.php';

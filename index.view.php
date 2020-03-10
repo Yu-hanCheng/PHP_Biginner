@@ -12,13 +12,13 @@
 </head>
 <body>
     <header>
-        <h1><?=
-                $greeting;
-                foreach ($names as $name) {
-                    echo "<li>$name</li>";
-                }
-            ?>
-        </h1>
+        <h1>
+            <ul>
+                <?php foreach ($names as $name) :?>
+                        <li><?= $name; ?></li>
+                <?php endforeach; ?>
+            </ul>
+        <h1>
     </header>
 </body>
 </html> 

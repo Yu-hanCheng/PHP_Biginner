@@ -12,20 +12,16 @@
 </head>
 <body>
     <ul>
-        <li><strong>Title </strong><?= ucwords($task['title']); ?></li>
-    </ul>
-    <ul>
-        <li><strong>Status </strong><?= $task['completed']?'Complete' : 'Incomplete'; ?></li>
-    </ul>
-    <ul>
+        <?php foreach ($tasks as $task) : ?>
         <li>
-            <strong>Status </strong>
-            <?php if ($task['completed']) : ?>
+            <?php if ($task->completed) : ?>
+                <strike><?= $task->description; ?></strike>
                 <span class="icon">&#9989;</span>
-            <?php else : ?>
-                <span class="icon">Incomplete</span>
+            <?php else: ?>
+            <?= $task->description; ?>
             <?php endif; ?>
         </li>
+            <?php endforeach; ?>
     </ul>
 </body>
 </html> 

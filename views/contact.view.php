@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <?php require('partials/nav.php') ?>
     <h1>About <?= $name; ?></h1>
 </body>
 

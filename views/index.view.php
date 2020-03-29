@@ -13,12 +13,7 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/about-contact">About Contact</a></li>
-        </ul>
-    </nav>
+    <?php require('partials/nav.php') ?>
     <ul>
         <?php foreach ($tasks as $task) : ?>
         <li>

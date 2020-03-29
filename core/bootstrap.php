@@ -5,7 +5,8 @@
     require 'core/Router.php';
     require 'core/Request.php';
 
-    $config = require 'config.php';
-    $pdo = Connection::make($config);
-    return new QueryBuilder($pdo);
+    $app = [];
+    $app['config'] = require 'config.php';
+    $app['database'] = new QueryBuilder(
+        Connection::make($app['config']['database']));
 ?>

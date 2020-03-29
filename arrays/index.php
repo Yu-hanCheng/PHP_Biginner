@@ -34,4 +34,6 @@ $titles = array_map(function ($post){
     return $post->title;
 }, $posts);
 
-var_dump($titles);
+$titles2 = array_column($posts, 'title');
+
+var_dump($titles2);

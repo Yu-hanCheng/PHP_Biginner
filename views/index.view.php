@@ -1,13 +1,5 @@
-<html lang="en">
+<?php require('partials/head.php') ?>
 
-<head>
-    <meta charset="utf-8">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-</head>
-
-<body>
-    <?php require('partials/nav.php') ?>
     <ul>
         <?php foreach ($tasks as $task) : ?>
         <li>
@@ -20,6 +12,5 @@
         </li>
         <?php endforeach; ?>
     </ul>
-</body>
 
-</html>
+<?php require('partials/footer.php') ?>

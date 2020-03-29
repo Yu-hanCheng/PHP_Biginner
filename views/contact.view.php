@@ -1,13 +1,5 @@
-<!DOCTYPE html>
+<?php require('partials/head.php') ?>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <?php require('partials/nav.php') ?>
-    <h1>About <?= $name; ?></h1>
-</body>
+    <h1>About contact <?= $name; ?></h1>
 
-</html>
+<?php require('partials/footer.php') ?>

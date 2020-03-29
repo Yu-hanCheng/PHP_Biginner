@@ -18,4 +18,12 @@ $posts = [
     new Post("third", false),
 ];
 
-var_dump($posts);
+$published = array_filter($posts, function ($post) {
+    return $post->published;
+});
+
+$unpublished = array_filter($posts, function ($post) {
+    return ! $post->published;
+});
+
+var_dump($published);

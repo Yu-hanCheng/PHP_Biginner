@@ -30,4 +30,8 @@ $modified = array_map(function ($post){
     return ['title' => $post->title];
 }, $posts);
 
-var_dump($modified);
+$titles = array_map(function ($post){
+    return $post->title;
+}, $posts);
+
+var_dump($titles);

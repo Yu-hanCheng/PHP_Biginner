@@ -3,19 +3,21 @@
 class Post
 {
     public $title;
+    public $author;
     public $published;
 
-    public function __construct($title, $published)
+    public function __construct($title, $author, $published)
     {
         $this->title = $title;
+        $this->author= $author;
         $this->published = $published;
     }
 }
 
 $posts = [
-    new Post("First", true),
-    new Post("second", true),
-    new Post("third", false),
+    new Post("First", 'sa',true),
+    new Post("second", 'sa', true),
+    new Post("third",'sa', false),
 ];
 
 $published = array_filter($posts, function ($post) {
@@ -34,6 +36,8 @@ $titles = array_map(function ($post){
     return $post->title;
 }, $posts);
 
-$titles2 = array_column($posts, 'title');
+$titles2 = array_column($posts, 'title','author');
+
+
 
 var_dump($titles2);

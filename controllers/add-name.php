@@ -1,2 +1,6 @@
 <?php
-var_dump($_GET);
+
+$app['database']->insert('user_test', [
+    'name' => $_POST['name'],
+    'email' => "sa@gs.com"
+]);

@@ -1,6 +1,6 @@
 <?php require('partials/head.php') ?>
 
-<form action="/names" method="get">
+<form action="/names" method="post">
     <input name="name"></input>
     <button type="submit">submit</button>
 </form>

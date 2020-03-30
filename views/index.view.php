@@ -1,5 +1,9 @@
 <?php require('partials/head.php') ?>
 
+<?php foreach($users as $user): ?>
+    <li><?= $user->name ?></li>
+<?php endforeach ?>
+
 <form action="/names" method="post">
     <input name="name"></input>
     <button type="submit">submit</button>

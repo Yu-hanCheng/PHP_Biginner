@@ -1,5 +1,5 @@
 <?php
-    $router->get('', 'controllers/index.php');
-    $router->get('about', 'controllers/about.php');
-    $router->get('about-contact', 'controllers/about-contact.php');
-    $router->post('names', 'controllers/add-name.php');
+    $router->get('', 'PageController@home');
+    $router->get('about', 'PageController@about');
+    $router->get('about-contact', 'PageController@contact');
+    // $router->post('names', 'controllers/add-name.php');
